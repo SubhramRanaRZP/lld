@@ -1,8 +1,8 @@
 package main
 
 import (
-	"lld/snake-ladder/entities"
 	"lld/snake-ladder/ioHandler"
+	entities2 "lld/snake-ladder/src/entities"
 )
 
 func main() {
@@ -11,13 +11,13 @@ func main() {
 	var playerNames []string
 	ioHandler.TakeInput(&snakeCnt, &ladderCnt, &snakes, &ladders, &playerCnt, &playerNames)
 
-	var players []*entities.Player
+	var players []*entities2.Player
 	for _, name := range playerNames{
-		players = append(players, entities.NewPlayer(name))
+		players = append(players, entities2.NewPlayer(name))
 	}
 
-	IGame := entities.NewGame(
-		entities.NewBoard(100, snakeCnt, snakes, ladderCnt, ladders),
+	IGame := entities2.NewGame(
+		entities2.NewBoard(100, snakeCnt, snakes, ladderCnt, ladders),
 		playerCnt,
 		players)
 
