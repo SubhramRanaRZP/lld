@@ -7,8 +7,8 @@ type macGUI struct {
 	b Button
 }
 
-func (gui *macGUI) CreateButton(buttonType enums.ButtonType) {
-	gui.b = newButton(buttonType)
+func (gui *macGUI) CreateButton(color string , buttonType enums.ButtonType) {
+	gui.b = newButton(color, buttonType)
 }
 
 func (gui *macGUI) ClickButton() {
@@ -20,8 +20,8 @@ type winGUI struct {
 	b Button
 }
 
-func (gui *winGUI) CreateButton(buttonType enums.ButtonType) {
-	gui.b = newButton(buttonType)
+func (gui *winGUI) CreateButton(color string, buttonType enums.ButtonType) {
+	gui.b = newButton(color, buttonType)
 }
 
 func (gui *winGUI) ClickButton() {

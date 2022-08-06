@@ -6,11 +6,11 @@ type (
 )
 
 const (
-	Mac guiType = iota + 1
+	Mac GUIType = iota + 1
 	Window
 )
 
 const (
-	PopOut buttonType = iota + 1
+	PopOut ButtonType = iota + 1
 	Blink
 )

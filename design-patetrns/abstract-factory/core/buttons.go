@@ -11,7 +11,7 @@ type popButton struct {
 }
 
 func (b *popButton) Click() {
-	fmt.Printf("%v colored button poped-out", b.color)
+	fmt.Printf("%v colored button poped-out\n", b.color)
 }
 
 // blinkButton blinks when you click
@@ -20,16 +20,16 @@ type blinkButton struct {
 }
 
 func (b *blinkButton) Click() {
-	fmt.Printf("%v colored button blinked", b.color)
+	fmt.Printf("%v colored button blinked\n", b.color)
 }
 
-func newButton(buttonType enums.ButtonType) Button {
+func newButton(color string, buttonType enums.ButtonType) Button {
 	var b Button
 	switch buttonType {
 	case enums.PopOut:
-		b = &popButton{}
+		b = &popButton{color: color}
 	case enums.Blink:
-		b = &blinkButton{}
+		b = &blinkButton{color: color}
 	default:
 		b = nil
 	}

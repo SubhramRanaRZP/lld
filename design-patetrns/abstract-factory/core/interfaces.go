@@ -1,7 +1,9 @@
 package core
 
+import "lld/design-patetrns/abstract-factory/core/enums"
+
 type GUI interface {
-	CreateButton(buttonType string)
+	CreateButton(color string , buttonType enums.ButtonType)
 	ClickButton()
 }
 
