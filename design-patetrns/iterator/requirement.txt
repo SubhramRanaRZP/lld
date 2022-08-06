@@ -1,0 +1,4 @@
+client should be able to
+1. for an iterable data structure(ex: tree), it can be able to create multiple iterator(ex: bfs, dfs)
+   at runtime
+2. read the interfaces.go file comments carefully to know the extensibility of the system
