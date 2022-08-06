@@ -1,0 +1,4 @@
+client should be able to
+1. build multiple type of houses at the runtime
+2. Since building a house contains multiple sequential large tasks, client need not to worry about
+   the sequence.
