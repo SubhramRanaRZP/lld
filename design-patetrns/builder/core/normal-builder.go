@@ -9,6 +9,10 @@ func newNormalBuilder() IBuilder {
 	return &normalBuilder{house: &House{}}
 }
 
+func (b *normalBuilder) SetHouseType() {
+	b.house.HouseType = "normal"
+}
+
 func (b *normalBuilder) SetNumberOfFloors() {
 	b.house.Floor = 2
 }

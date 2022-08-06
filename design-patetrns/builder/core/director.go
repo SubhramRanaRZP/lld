@@ -22,6 +22,7 @@ func (d *director) SetBuilder(builder IBuilder) {
 }
 
 func (d *director) BuildHouse() {
+	d.builder.SetHouseType()
 	d.builder.SetNumberOfFloors()
 	d.builder.SetDoorType()
 	d.builder.SetWindowType()

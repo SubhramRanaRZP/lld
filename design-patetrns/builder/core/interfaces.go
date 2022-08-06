@@ -1,6 +1,7 @@
 package core
 
 type IBuilder interface {
+	SetHouseType()
 	SetNumberOfFloors()
 	SetDoorType()
 	SetWindowType()

@@ -26,6 +26,10 @@ func newIglooBuilder() IBuilder {
 	return &iglooBuilders{house: &House{}}
 }
 
+func (b *iglooBuilders) SetHouseType() {
+	b.house.HouseType = "igloo"
+}
+
 func (b *iglooBuilders) SetNumberOfFloors() {
 	b.house.Floor = 1
 }
