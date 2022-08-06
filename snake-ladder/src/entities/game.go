@@ -18,9 +18,9 @@ type game struct {
 // NewGame returns a new game
 func NewGame(b *board, playerCnt int, players []*Player) IGame {
 	return &game{
-		board:   b,
+		board:     b,
 		playerCnt: playerCnt,
-		players: players,
+		players:   players,
 	}
 }
 
@@ -44,6 +44,6 @@ func (g *game) Play() {
 				fmt.Sprintf("%v wins the game", currentPlayer.name))
 			break
 		}
-		//time.Sleep(100*time.Millisecond)
+		// time.Sleep(100*time.Millisecond)
 	}
 }

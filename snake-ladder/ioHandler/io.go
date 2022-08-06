@@ -14,8 +14,10 @@ const (
 	inputFileName  = "input.txt"
 )
 
-var InputFilePath string
-var OutputFilePath string
+var (
+	InputFilePath  string
+	OutputFilePath string
+)
 
 func init() {
 	wd, err := getCurrentWorkingDirectory()
@@ -42,23 +44,23 @@ func getCurrentWorkingDirectory() (string, error) {
 
 // Write writes to the output file
 func Write(filePath string, text string) {
-	file,err := os.OpenFile(OutputFilePath, os.O_APPEND|os.O_WRONLY, 0)
-	if err!=nil {
+	file, err := os.OpenFile(OutputFilePath, os.O_APPEND|os.O_WRONLY, 0)
+	if err != nil {
 		log.Fatalf("error in opening output file: %v", err.Error())
 	}
 
 	defer file.Close()
 
-	if _, err = file.WriteString(fmt.Sprintf("%v\n", text)) ; err!=nil {
+	if _, err = file.WriteString(fmt.Sprintf("%v\n", text)); err != nil {
 		log.Fatalf("error while writing to output file: %v", err.Error())
 	}
 }
 
 func TakeInput(snakeCnt *int, ladderCnt *int, snakes *[][]int, ladders *[][]int,
-	playerCnt *int, playerNames *[]string) {
-
+	playerCnt *int, playerNames *[]string,
+) {
 	file, err := os.Open(InputFilePath)
-	if err !=nil {
+	if err != nil {
 		log.Fatalf("error while opening input file: %v", err.Error())
 	}
 	defer file.Close()
@@ -67,10 +69,10 @@ func TakeInput(snakeCnt *int, ladderCnt *int, snakes *[][]int, ladders *[][]int,
 
 	// snakes input
 	scanner.Scan()
-	snCnt,_ := strconv.Atoi(scanner.Text())
+	snCnt, _ := strconv.Atoi(scanner.Text())
 	*snakeCnt = snCnt
 	var snks [][]int
-	for i:=0;i<*snakeCnt;i++{
+	for i := 0; i < *snakeCnt; i++ {
 		scanner.Scan()
 		line := scanner.Text()
 		nums := strings.Split(line, " ")
@@ -82,9 +84,9 @@ func TakeInput(snakeCnt *int, ladderCnt *int, snakes *[][]int, ladders *[][]int,
 
 	// ladder input
 	scanner.Scan()
-	lddrCnt,_ := strconv.Atoi(scanner.Text())
+	lddrCnt, _ := strconv.Atoi(scanner.Text())
 	*ladderCnt = lddrCnt
-	for i:=0;i<*ladderCnt;i++{
+	for i := 0; i < *ladderCnt; i++ {
 		scanner.Scan()
 		line := scanner.Text()
 		nums := strings.Split(line, " ")
@@ -98,7 +100,7 @@ func TakeInput(snakeCnt *int, ladderCnt *int, snakes *[][]int, ladders *[][]int,
 	scanner.Scan()
 	plyrCnt, _ := strconv.Atoi(scanner.Text())
 	*playerCnt = plyrCnt
-	for i:=0;i<*playerCnt;i++ {
+	for i := 0; i < *playerCnt; i++ {
 		scanner.Scan()
 		name := scanner.Text()
 		plrs := append(*playerNames, name)

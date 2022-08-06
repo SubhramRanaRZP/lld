@@ -12,7 +12,7 @@ func main() {
 	ioHandler.TakeInput(&snakeCnt, &ladderCnt, &snakes, &ladders, &playerCnt, &playerNames)
 
 	var players []*entities2.Player
-	for _, name := range playerNames{
+	for _, name := range playerNames {
 		players = append(players, entities2.NewPlayer(name))
 	}
 
