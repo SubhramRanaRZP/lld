@@ -1,0 +1,4 @@
+ex: The 'Service' struct that is used in any microservice is an example of facade to repo, factory
+ other gateways like perfios, karza, metro and all. If a api request comes, then it first calls the
+ server layer which then calls the service layer and which in turns call other required methods on
+ its own without letting the server layer to worry about it
