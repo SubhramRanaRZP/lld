@@ -1,0 +1,5 @@
+1. customer can subscribe to multiple product
+2. one product can be subscribed by multiple subscribers
+3. if product increases, then subscribers should get notified
+4. this system can be easily extensible for any number of new products to be added
+5. BONUS: notification system can be implemented via strategy pattern(next topic...)
