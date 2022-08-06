@@ -1,0 +1,3 @@
+1. If there are multiple tasks need to be done on a sequential manner
+2. client code should be able to gather a subset of tasks at runtime and process a request sequentially
+3. client should be able to build his custom task sequence
