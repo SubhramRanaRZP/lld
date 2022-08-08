@@ -1,0 +1,10 @@
+1. Be able to introduce multiple invokers with same set of functionality
+2. An invoker have multiple methods associated with it which can be invoked by multiple invokers
+   and we can change this in future easily
+
+
+Example:
+1. IN e-commerce service, both admin and customers can search any product. So there is a common
+  'searchObject' which have the method Search() and this object can be a data field of any
+   other object just because search-product logic is same for all persons. So don't want to
+   repeat the same code in every classes
