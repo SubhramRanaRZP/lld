@@ -1,0 +1,5 @@
+--------code is in incomplete state --------
+build test editor app having features
+1. add text
+2. undo/redo
+with the demonstration of 'originator', 'momento' and 'caretaker' via comments
