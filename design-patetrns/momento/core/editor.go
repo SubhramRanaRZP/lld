@@ -1,9 +1,10 @@
 package core
 
 type Editor struct {
-	content string
+	content      string
 	stateHistory editorStateHistory
 }
+
 func NewEditor() *Editor {
 	return &Editor{
 		content:      "",
@@ -11,7 +12,7 @@ func NewEditor() *Editor {
 	}
 }
 
-func (e *Editor) SetContent(content string){
+func (e *Editor) SetContent(content string) {
 	state := newEditorState(content)
 	e.stateHistory.addEditorState(state)
 }
@@ -20,10 +21,9 @@ func (e *Editor) GetContent() string {
 	return e.content
 }
 
-func (e *Editor) Undo(){
+func (e *Editor) Undo() {
 	e.content = e.stateHistory.restoreEditorState()
 }
 
-func (e *Editor) Redo(){
-
+func (e *Editor) Redo() {
 }

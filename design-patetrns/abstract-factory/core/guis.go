@@ -7,7 +7,7 @@ type macGUI struct {
 	b Button
 }
 
-func (gui *macGUI) CreateButton(color string , buttonType enums.ButtonType) {
+func (gui *macGUI) CreateButton(color string, buttonType enums.ButtonType) {
 	gui.b = newButton(color, buttonType)
 }
 

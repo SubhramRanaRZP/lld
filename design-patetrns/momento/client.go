@@ -4,7 +4,7 @@ import (
 	"lld/design-patetrns/momento/core"
 )
 
-func main(){
+func main() {
 	editor := core.NewEditor()
 
 	editor.SetContent("a")
